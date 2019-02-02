@@ -15,9 +15,8 @@
 
     <form class="form-signin" id="price-form">
         <h1 class="h3 mb-3 font-weight-normal">Пупсо-калькулятор</h1>
-        <label for="price" class="sr-only">Закупочная цена</label>
         <input type="text" id="price" class="form-control" placeholder="Закупочная цена" required autofocus>
-        <label for="retailPrice" class="sr-only">Цена продажи</label>
+        <input type="text" id="price2" class="form-control" placeholder="Цена с учетом доставки" readonly>
         <input type="text" id="retailPrice" class="form-control" placeholder="Цена продажи" readonly>
         <p class="mt-5 mb-3 text-muted">Моему любимому хомячку, чтобы долго не тыкать кнопки в калькуляторе</p>
     </form>
@@ -34,6 +33,7 @@
             var input_price = parseInt(this.value);
             if (!isNaN(input_price)) {
                 var retailPrice = input_price * 1.2;
+                $('#price2').val(retailPrice);
                 retailPrice = retailPrice * 4
                 $('#retailPrice').val(retailPrice);
             }

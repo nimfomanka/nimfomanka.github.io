@@ -37,6 +37,10 @@ body {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+.form-signin #price2 {
+  border-radius: 0;
+  margin-bottom: -1px;
+}
 .form-signin #retailPrice {
   margin-bottom: 10px;
   border-top-left-radius: 0;
