@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Пупсо-калькулятор",
+    "version": "1.2",
+    "description": "Специальный калькулятор для любимого хомячка, чтобы хомяку не нужно было считать ничего.",
+    "icons": {
+        "16": "images/icon_16.png",
+        "32": "images/icon_32.png",
+        "48": "images/icon_48.png",
+        "64": "images/icon_64.png",
+        "128": "images/icon_128.png"
+    },
+    "content_scripts": [{
+        "matches": ["https://online.moysklad.ru/app/*"],
+        "js": ["content_script/calc.js"],
+        "run_at": "document_end"
+    }],
+    "permissions": ["http://*/", "https://*/"],
+    "browser_action": {
+        "default_icon": {
+            "16": "images/icon_16.png",
+            "32": "images/icon_32.png",
+            "48": "images/icon_48.png",
+            "64": "images/icon_64.png",
+            "128": "images/icon_128.png"
+        },
+        "default_title": "Пупсо-калькулятор",
+        "default_popup": "popup/popup.html"
+    }
+}
